@@ -29,8 +29,12 @@ include_once ("../Funciones/funciones.php");
 									<div class="col-lg-12">
 										
 										<div class="form-group">
-											<label>Cuenta de Suscriptor:</label>
-											<input name="CUENTA" id="cuenta" type="number" autofocus="autofocus" class="form-control" placeholder="# de Suscriptor" required="required" />
+										<!-- VALIDACIÓN CTA  BD  -->
+													<?php
+														include_once ("./1/cuenta.php");
+													?>
+										<!-- VALIDACIÓN CTA  BD   -->
+											
 										</div>
 										
 										<div class="form-group">
@@ -123,8 +127,6 @@ include_once ("../Funciones/funciones.php");
 										
 										<br />
 										<hr />
-										
-											
 										
 										<div class="form-group">
 											

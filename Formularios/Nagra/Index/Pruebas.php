@@ -8,9 +8,51 @@ $sql_select_razon = mysql_query ("SELECT ID, RAZON, ESTADO FROM tbl_ccaa_sec_nag
 $select_razon = mysql_fetch_array($sql_select_razon);
 while($renglon=mysql_fetch_array($sql_select_razon))
 	{
-	//	echo $select_razon['RAZON'];
+//		echo $select_razon['RAZON'];
 	} 
 ?>
+
+<br />
+<br />
+<br />
+<br />
+
+
+<?php
+
+
+// Consulta Ctas existentes proyecto NAGRA
+$sqlcta = "SELECT ID, CUENTA FROM `tbl_ccaa_sec_nagra_cuentas` WHERE CUENTA ='".$_POST['CUENTA']."'";
+$resultacta = mysql_query ($sqlcta);
+// valido error de consulta 
+		if (! $resultacta)
+			{
+				echo "La consulta SQL contiene errores.".mysql_error();
+				exit();
+			}
+		else 
+			{
+			// obtengo ID y Cta  
+		    	$row = mysql_fetch_row($resultacta);
+				// echo $row[0];
+				// echo "<br>".$row[0]."<br>".$row[1]."<br>";
+				if(count($row[1]) >= '1')	
+				echo $row[1];
+				elseif(count($row[1]) == '0') echo 'CUENTA NO REGISTRADA';
+				else echo "ERROR DATO!";
+
+ 			}			
+?>  
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 
 

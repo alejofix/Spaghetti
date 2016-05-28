@@ -127,7 +127,9 @@ include_once ("../Funciones/funciones.php");
 										echo "   
 										<div class='alert alert-success'>
 		                                <b>!Gracias!</b>, Información almacenada con éxito ... 
-		                            	</div>   
+		                           			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								   			<button type='button' class='btn btn-success btn-circle btn-lg'><i class='fa fa-check'></i>
+										</div>   
 										"; 
 								
 								?>
