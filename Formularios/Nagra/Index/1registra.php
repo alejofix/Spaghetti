@@ -34,18 +34,18 @@ include_once ("../Funciones/funciones.php");
 									$cuenta = $_POST["CUENTA"];   
 									$razon = $_POST["RAZON"];
 									$fecha = date("Y-m-d h:i:s");
-									$referencia = $_POST["REFERENCIA"];
-									$descripcion = $_POST["DESCRIPCION"];
+									$referencia = strtoupper($_POST["REFERENCIA"]);
+									$descripcion = strtoupper($_POST["DESCRIPCION"]) ;
 									
 									$sintomarecreado = $_POST["SINTOMARECREADO"];
 									if($sintomarecreado == 1){
-										$sintoma1 = $_POST ["SINTOMA1"];
-										$sintoma2 = $_POST ["SINTOMA2"];
-										$sintoma3 = $_POST ["SINTOMA3"];
-										$sintoma4 = $_POST ["SINTOMA4"];
-										$sintoma5 = $_POST ["SINTOMA5"];
-										$sintoma6 = $_POST ["SINTOMA6"];
-										$sintoma7 = $_POST ["SINTOMA7"];
+										$sintoma1 = strtolower($_POST ["SINTOMA1"]);
+										$sintoma2 = strtolower($_POST ["SINTOMA2"]);
+										$sintoma3 = strtolower($_POST ["SINTOMA3"]);
+										$sintoma4 = strtolower($_POST ["SINTOMA4"]);
+										$sintoma5 = strtolower($_POST ["SINTOMA5"]);
+										$sintoma6 = strtolower($_POST ["SINTOMA6"]);
+										$sintoma7 = strtolower($_POST ["SINTOMA7"]);
 									} 
 										else {
 											$sintoma1 = 'NULL';
@@ -61,13 +61,13 @@ include_once ("../Funciones/funciones.php");
 									$fallasolucionada = $_POST ["FALLASOLUCIONADA"];
 									
 									if($fallasolucionada == 1){
-										$solucionsi1 = $_POST ["SOLUCIONSI1"];
-										$solucionsi2 = $_POST ["SOLUCIONSI2"];
-										$solucionsi3 = $_POST ["SOLUCIONSI3"];
-										$solucionsi4 = $_POST ["SOLUCIONSI4"];
-										$solucionsi5 = $_POST ["SOLUCIONSI5"];
-										$solucionsi6 = $_POST ["SOLUCIONSI6"];
-										$solucionsi7 = $_POST ["SOLUCIONSI7"];
+										$solucionsi1 = strtolower($_POST ["SOLUCIONSI1"]);
+										$solucionsi2 = strtolower($_POST ["SOLUCIONSI2"]);
+										$solucionsi3 = strtolower($_POST ["SOLUCIONSI3"]);
+										$solucionsi4 = strtolower($_POST ["SOLUCIONSI4"]);
+										$solucionsi5 = strtolower($_POST ["SOLUCIONSI5"]);
+										$solucionsi6 = strtolower($_POST ["SOLUCIONSI6"]);
+										$solucionsi7 = strtolower($_POST ["SOLUCIONSI7"]);
 										$solucionno1 = 'NULL';
 										$solucionno2 = 'NULL';
 										$solucionno3 = 'NULL';
@@ -85,21 +85,21 @@ include_once ("../Funciones/funciones.php");
 										$solucionsi5 = 'NULL';
 										$solucionsi6 = 'NULL';
 										$solucionsi7 = 'NULL';
-										$solucionno1 = $_POST ["SOLUCIONNO1"];
-										$solucionno2 = $_POST ["SOLUCIONNO2"];
-										$solucionno3 = $_POST ["SOLUCIONNO3"];
-										$solucionno4 = $_POST ["SOLUCIONNO4"];
-										$solucionno5 = $_POST ["SOLUCIONNO5"];
-										$solucionno6 = $_POST ["SOLUCIONNO6"];
-										$solucionno7 = $_POST ["SOLUCIONNO7"];
-										$escalamiento = $_POST ["ESCALAMIENTO"];
+										$solucionno1 = strtolower($_POST ["SOLUCIONNO1"]);
+										$solucionno2 = strtolower($_POST ["SOLUCIONNO2"]);
+										$solucionno3 = strtolower($_POST ["SOLUCIONNO3"]);
+										$solucionno4 = strtolower($_POST ["SOLUCIONNO4"]);
+										$solucionno5 = strtolower($_POST ["SOLUCIONNO5"]);
+										$solucionno6 = strtolower($_POST ["SOLUCIONNO6"]);
+										$solucionno7 = strtolower($_POST ["SOLUCIONNO7"]);
+										$escalamiento = ucwords($_POST ["ESCALAMIENTO"]);
 									};
 									
-									$usuario = $_POST["USUARIO"];
-									$empresa = $_POST["EMPRESA"];
+									$usuario = strtoupper($_POST["USUARIO"]);
+									$empresa = strtoupper($_POST["EMPRESA"]);
 									
 								
-									print_r($_POST); 
+								//	print_r($_POST); 
 										
 									$_GRABAR_SQL = "
 										INSERT INTO $tbl_ccaa_pri_nagra
@@ -119,7 +119,8 @@ include_once ("../Funciones/funciones.php");
 										'$solucionno1','$solucionno2','$solucionno3','$solucionno4','$solucionno5','$solucionno6','$solucionno7','$escalamiento',
 										'$usuario','$empresa'
 										)";   
-									//mysql_query($_GRABAR_SQL);
+									
+									mysql_query($_GRABAR_SQL);
 									//		
 									include_once ("../Funciones/cierra_conexion.php"); 								
 									

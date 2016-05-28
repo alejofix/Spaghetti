@@ -12,6 +12,8 @@ while($renglon=mysql_fetch_array($sql_select_razon))
 	} 
 ?>
 
+
+
 <select >
 
 	<option value="0">::.::</option>
@@ -26,3 +28,17 @@ while($renglon=mysql_fetch_array($sql_select_razon))
 	?>
 	
 </select>
+
+
+
+
+#		<?php
+#			$array = $_GET;
+#			echo '<code><pre>';
+#			print_r($array);
+#			ksort($array);
+#			print_r($array);
+#			$pdo->prepare('INSERT INTO TABLA (NOMBRE, TEL, ZULU) VALUES (:nombre, ?, ?)');
+#			$pdo->bindValue(':nombre', $valor);
+#			echo '</code></pre>';
+#		?>

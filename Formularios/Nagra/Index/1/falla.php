@@ -184,7 +184,7 @@
 													<div class="group-option">
 														<div class="col-lg-10">
 				                                            <p class="help-block">¿A quién realizo escalamiento?</p>
-															<input name="ESCALAMIENTO" id="escalamiento" class="form-control"/>
+															<input name="ESCALAMIENTO" id="escalamiento" class="form-control" placeholder="Nombre Completo" />
 				                                        </div>
 				                                        <div class="col-lg-2">
 				                                        <br />
