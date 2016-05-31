@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-05-2016 a las 15:35:37
+-- Tiempo de generación: 31-05-2016 a las 16:06:40
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `tbl_ccaa_pri_nagra` (
   `ID` bigint(20) NOT NULL COMMENT 'ID Formulario Nagra',
   `TIPO` varchar(100) NOT NULL COMMENT 'Tipo del Motivo',
   `CUENTA` bigint(20) NOT NULL COMMENT 'Cuenta del Motivo',
-  `RAZON` varchar(100) NOT NULL COMMENT 'Razón del Tipo',
+  `RAZON` int(2) NOT NULL COMMENT 'Razón del Tipo',
   `FECHA` datetime NOT NULL COMMENT 'Fecha del Reporte',
   `REFERENCIA` varchar(100) DEFAULT NULL COMMENT 'Referencia Motivo Tipo',
   `DESCRIPCION` mediumtext COMMENT 'Descripción de la falla',
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `tbl_ccaa_pri_nagra` (
   `SINTOMA5` mediumtext COMMENT 'Sintoma #5',
   `SINTOMA6` mediumtext COMMENT 'Sintoma #6',
   `SINTOMA7` mediumtext COMMENT 'Sintoma #7',
-  `ERROR` varchar(50) DEFAULT NULL COMMENT 'frecuencia de la Falla',
+  `ERROR` int(2) NOT NULL COMMENT 'frecuencia de la Falla',
   `FALLASOLUCIONADA` int(2) NOT NULL COMMENT '1 SI 0 NO',
   `SOLUCIONSI1` mediumtext COMMENT 'Solución SI #1',
   `SOLUCIONSI2` mediumtext COMMENT 'Solución SI #2',
@@ -157,20 +157,20 @@ INSERT INTO `tbl_ccaa_sec_nagra_cuentas` (`ID`, `CUENTA`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_ccaa_sec_nagra_frecuencia`
+-- Estructura de tabla para la tabla `tbl_ccaa_select_nagra_frecuencia`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_ccaa_sec_nagra_frecuencia` (
+CREATE TABLE IF NOT EXISTS `tbl_ccaa_select_nagra_frecuencia` (
   `ID` int(2) NOT NULL COMMENT 'ID frecuencia de Fallo',
   `FRECUENCIA` varchar(50) COLLATE utf8_bin NOT NULL COMMENT 'Frecuencia Fallo',
   `ESTADO` int(2) NOT NULL COMMENT 'Estado de Frecuancia'
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Volcado de datos para la tabla `tbl_ccaa_sec_nagra_frecuencia`
+-- Volcado de datos para la tabla `tbl_ccaa_select_nagra_frecuencia`
 --
 
-INSERT INTO `tbl_ccaa_sec_nagra_frecuencia` (`ID`, `FRECUENCIA`, `ESTADO`) VALUES
+INSERT INTO `tbl_ccaa_select_nagra_frecuencia` (`ID`, `FRECUENCIA`, `ESTADO`) VALUES
 (1, 'SIEMPRE', 1),
 (2, 'ALGUNAS VECES', 1),
 (3, 'ES LA PRIMERA VEZ', 1);
@@ -178,20 +178,20 @@ INSERT INTO `tbl_ccaa_sec_nagra_frecuencia` (`ID`, `FRECUENCIA`, `ESTADO`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_ccaa_sec_nagra_razon`
+-- Estructura de tabla para la tabla `tbl_ccaa_select_nagra_razon`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_ccaa_sec_nagra_razon` (
+CREATE TABLE IF NOT EXISTS `tbl_ccaa_select_nagra_razon` (
   `ID` int(2) NOT NULL COMMENT 'ID Razones Nagra',
   `RAZON` varchar(50) COLLATE utf8_bin NOT NULL COMMENT 'Nombre de la Razón',
   `ESTADO` int(2) NOT NULL COMMENT '1 Enable'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Volcado de datos para la tabla `tbl_ccaa_sec_nagra_razon`
+-- Volcado de datos para la tabla `tbl_ccaa_select_nagra_razon`
 --
 
-INSERT INTO `tbl_ccaa_sec_nagra_razon` (`ID`, `RAZON`, `ESTADO`) VALUES
+INSERT INTO `tbl_ccaa_select_nagra_razon` (`ID`, `RAZON`, `ESTADO`) VALUES
 (1, 'FALLA EN TELEVISIÓN', 1),
 (2, 'FALLA EN CLARO VIDEO', 1),
 (3, 'FALLA EN TELEVISIÓN Y CLARO VIDEO', 1),
@@ -205,7 +205,9 @@ INSERT INTO `tbl_ccaa_sec_nagra_razon` (`ID`, `RAZON`, `ESTADO`) VALUES
 -- Indices de la tabla `tbl_ccaa_pri_nagra`
 --
 ALTER TABLE `tbl_ccaa_pri_nagra`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `fk_TBL_CCAA_PRI_NAGRA_TBL_CCAA_SELECT_NAGRA_RAZON_idx` (`RAZON`),
+  ADD KEY `fk_TBL_CCAA_PRI_NAGRA_TBL_CCAA_SELECT_NAGRA_FRECUENCIA1_idx` (`ERROR`);
 
 --
 -- Indices de la tabla `tbl_ccaa_sec_nagra_cuentas`
@@ -214,15 +216,15 @@ ALTER TABLE `tbl_ccaa_sec_nagra_cuentas`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `tbl_ccaa_sec_nagra_frecuencia`
+-- Indices de la tabla `tbl_ccaa_select_nagra_frecuencia`
 --
-ALTER TABLE `tbl_ccaa_sec_nagra_frecuencia`
+ALTER TABLE `tbl_ccaa_select_nagra_frecuencia`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indices de la tabla `tbl_ccaa_sec_nagra_razon`
+-- Indices de la tabla `tbl_ccaa_select_nagra_razon`
 --
-ALTER TABLE `tbl_ccaa_sec_nagra_razon`
+ALTER TABLE `tbl_ccaa_select_nagra_razon`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -240,10 +242,21 @@ ALTER TABLE `tbl_ccaa_pri_nagra`
 ALTER TABLE `tbl_ccaa_sec_nagra_cuentas`
   MODIFY `ID` int(2) NOT NULL AUTO_INCREMENT COMMENT 'ID cuenta',AUTO_INCREMENT=75;
 --
--- AUTO_INCREMENT de la tabla `tbl_ccaa_sec_nagra_frecuencia`
+-- AUTO_INCREMENT de la tabla `tbl_ccaa_select_nagra_frecuencia`
 --
-ALTER TABLE `tbl_ccaa_sec_nagra_frecuencia`
+ALTER TABLE `tbl_ccaa_select_nagra_frecuencia`
   MODIFY `ID` int(2) NOT NULL AUTO_INCREMENT COMMENT 'ID frecuencia de Fallo',AUTO_INCREMENT=4;
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `tbl_ccaa_pri_nagra`
+--
+ALTER TABLE `tbl_ccaa_pri_nagra`
+  ADD CONSTRAINT `fk_TBL_CCAA_PRI_NAGRA_TBL_CCAA_SELECT_NAGRA_FRECUENCIA1` FOREIGN KEY (`ERROR`) REFERENCES `tbl_ccaa_select_nagra_frecuencia` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_TBL_CCAA_PRI_NAGRA_TBL_CCAA_SELECT_NAGRA_RAZON` FOREIGN KEY (`RAZON`) REFERENCES `tbl_ccaa_select_nagra_razon` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

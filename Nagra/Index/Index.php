@@ -2,8 +2,6 @@
 <html lang="es">
 <?php
 include_once ("../Base/Head.html");
-include_once ("../Funciones/conexionbasedatos.php");
-include_once ("../Funciones/funciones.php");
 ?>
 
 <body>

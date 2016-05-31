@@ -2,7 +2,6 @@
 <html lang="es">
 <?php
 include_once ("../Base/Head.html");
-include_once ("../Funciones/conexionbasedatos.php");
 include_once ("../Funciones/funciones.php");
 ?>
 
@@ -40,12 +39,15 @@ include_once ("../Funciones/funciones.php");
 										<div class="form-group">
 											<label>¿En qué producto presenta la falla?</label>
 											<select name="RAZON" id="razon" class="form-control" required>
-												<option value="">Seleccione una Opción</option>
+												<option value="">Escoja una Opcion</option>
 												<optgroup>
-														<option value="1">FALLA EN TELEVISIÓN</option>
-														<option value="2">FALLA EN CLARO VIDEO </option>
-														<option value="3">FALLA EN TELEVISIÓN Y CLARO VIDEO </option>
-														<option value="4">OTRAS FALLAS</option>
+													<?php foreach ($resultado AS $param): ?>
+														
+														<option value="<?php echo $param['ID'] ?>">
+															<?php echo $param['RAZON'] ?>
+														</option>
+														
+													<?php endforeach; ?>
 												</optgroup>
 											</select>
 										</div>
@@ -95,12 +97,16 @@ include_once ("../Funciones/funciones.php");
 											</div>
 											<div class="col-lg-6">
 												<select name="ERROR" id="error" class="form-control" required>
-													<option value="">Seleccione una Opción</option>
-													<optgroup>
-															<option value="1">Siempre</option>
-															<option value="2">Algunas Veces</option>
-															<option value="3">Es la Primera Vez</option>
-													</optgroup>
+												<option value="">Escoja una Opcion</option>
+												<optgroup>
+													<?php foreach ($resultado2 AS $param): ?>
+														
+														<option value="<?php echo $param['ID'] ?>">
+															<?php echo $param['FRECUENCIA'] ?>
+														</option>
+														
+													<?php endforeach; ?>
+												</optgroup>
 												</select>
 											</div>
 										</div>
