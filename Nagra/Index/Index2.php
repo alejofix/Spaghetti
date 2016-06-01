@@ -28,7 +28,7 @@ include_once ("../Base/Head.html");
 										
 										<div class="form-group">
 											<div class="alert alert-success">
-													<b>!CUENTA NO REGISTRADA!</b>, Ingrese una Cuenta Nagra registrada ... 
+													<b>!CUENTA NO REGISTRADA!</b>, Por favor ingrese una cuenta valida ... 
 		           						      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								   					<button type='button' class='btn btn-danger btn-circle btn-lg'><i class='fa fa-times'></i>
 											</div> 

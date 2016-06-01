@@ -88,13 +88,25 @@
 	
 		echo "   
 		<div class='alert alert-success'>
-        <b>!Gracias!</b>, Información almacenada con éxito ... 
+        	<b>!Gracias!</b>, 
+			Información almacenada con éxito ... 
    			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    			<button type='button' class='btn btn-success btn-circle btn-lg'><i class='fa fa-check'></i>
-		</div>   
+		</div> 
+	 
 		"; 
 
 ?>
+		<div class='panel-body'>
+			<form method="get" action="Index.php">
+			    <button class='btn btn-primary btn-lg btn-block' type="submit">
+					<i class='fa fa-link'></i>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Nuevo Registro
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				</button>
+			</form>
+		</div> 	
 								<!-- -->
 								
 								
