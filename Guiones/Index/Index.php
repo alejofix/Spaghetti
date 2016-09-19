@@ -40,7 +40,7 @@ include_once ("../Base/Head.html");
 										<div class="form-group">
 											<label>Correo Registrado </label>
 											<div class="col-lg-12">
-												<input class="form-control" type="email" name="correo" id="correo"   placeholder="Describa Falla" autofocus="Correo Registrado Claro Video" required="required"   maxlength="100"/>
+												<input class="form-control" type="email" name="correo" id="correo"   placeholder="Correo registrado Claro Video" autofocus="Correo Registrado Claro Video" required="required"   maxlength="100"/>
 											</div><br />
 										</div>
 										

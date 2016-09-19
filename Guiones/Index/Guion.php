@@ -17,7 +17,6 @@ include_once ("../Base/Head.html");
 			}
 		 </script>
  
- 
 	<div class="panel-body">
 		<!--
 		<div class="row">
