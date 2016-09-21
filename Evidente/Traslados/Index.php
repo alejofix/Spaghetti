@@ -7,19 +7,12 @@ include_once ("../Base/Head.html");
 
 	<div class="panel-body">
 		
-		<div class="row">
-			<div class="col-lg-6">
-				<h3 class="page-header">Evidente Traslados</h3>
-			</div>
-
-		</div>
-		
 		<!-- /.row -->
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						Confirma si cliente responde bien las preguntas
+						Valide la titularidad de quien llama
 					</div>
 					<div class="panel-body">
 						<div class="row">

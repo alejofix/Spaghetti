@@ -1,3 +1,3 @@
 <script type="text/javascript">
-	swal("Correcto", "El cliente ha respondido correctamente, por favor continúa con el traslado", "success")
+	swal("Correcto", "El cliente ha respondido correctamente, por favor da Click en Continuar", "success")
 </script>
