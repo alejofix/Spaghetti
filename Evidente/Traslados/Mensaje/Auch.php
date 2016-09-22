@@ -1,4 +1,4 @@
 <script type="text/javascript">
-	sweetAlert("Incorrecto...", "Informa al cliente que por seguridad no es posible continuar con el proceso, da clic en Finalizar", "error");
+	sweetAlert("Incorrecto...", "Informa al cliente que no es posible continuar con el proceso ya que alguna respuesta no es correcta, da click en Finalizar", "error");
 </script>
 
