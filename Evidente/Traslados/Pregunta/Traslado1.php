@@ -1,17 +1,17 @@
 <div class="form-group">
-    <label>¿ Cuál fue el valor de su última factura  ?</label>
+    <label>¿ En qué mes realizó su último Traslado  ?</label>
 		<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;¿ Responde correctamente ?
     <div class="radio">
         <label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input onclick="SiRespuesta()" type="radio" name="factura" id="factura" value="SI" required="required"/>Si
+			<input onclick="SiRespuesta()" type="radio" name="TRASLADO1" id="traslado1" value="SI" required="required"/>Si
         </label>
         
     </div>
     <div class="radio">
         <label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input onclick="NoRespuesta()" type="radio" name="factura" id="factura" value="NO" required="required"/>No
+			<input onclick="NoRespuesta()" type="radio" name="TRASLADO1" id="traslado1" value="NO" required="required"/>No
         </label>
     </div>
 </div>

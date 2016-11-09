@@ -1,9 +1,9 @@
 <?php
 
 	//variables
-	$traslado = $_GET['traslado'];
-	$direccion = $_GET['direccion'];
-	$factura = $_GET['factura'];
+	$traslado = $_POST['TRASLADO1'];
+	$direccion = $_POST['DIRECCION1'];
+	$factura = $_POST['FACTURA1'];
 	
 	if($traslado == 'SI'){
 		
