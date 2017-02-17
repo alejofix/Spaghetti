@@ -1,0 +1,113 @@
+[33mcommit 7b12576fc0733e78d1633b1b327b2b0620bcf79d[m
+Author: AlejoFix <alejo_fix@HOTMAIL.COM>
+Date:   Wed Nov 9 15:04:56 2016 -0500
+
+    add de formularioEvidente en Spaghetti con bd funcional
+
+[33mcommit 8d9e111886dabf435518a1884f4fed75e8b05f98[m
+Author: AlejoFix <alejo_fix@HOTMAIL.COM>
+Date:   Thu Nov 3 09:33:22 2016 -0500
+
+    del de index para pruebas en carpeta fix
+
+[33mcommit 827fb3a52ecba8f79d06cb6856f940960f274302[m
+Author: AlejoFix <alejo_fix@HOTMAIL.COM>
+Date:   Mon Oct 24 16:47:32 2016 -0500
+
+    ad Manuales
+    
+    Manuales proyecto Vesga
+
+[33mcommit ada29a146b5df8cf94449ff15724a12366d0e03d[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Thu Sep 22 09:27:42 2016 -0500
+
+    cambio mensaje Evidente
+    
+    cambio mensaje Evidente
+
+[33mcommit 6fee01643d1f86902f97c41268a72445bd1c2d6e[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Wed Sep 21 13:38:03 2016 -0500
+
+    ad calculadora
+    
+    ad calculadora jhoncito
+
+[33mcommit 461f098ba14514cd21ae3a40cf2c366039b670b3[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Mon Sep 19 10:13:18 2016 -0500
+
+    proceso EVIDENTE
+    
+    creación proceso evidente
+
+[33mcommit a265ad5656c8aedc76a08eed8a969c72549ae654[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Wed Sep 14 10:34:48 2016 -0500
+
+    Guiones Nagra
+    
+    Guiones Nagra modo spaguetti
+
+[33mcommit e0916ab41689af76ea150973d902e1f0427076db[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Thu Jul 21 20:45:28 2016 -0500
+
+    recuperación registros BD
+    
+    recuperación registros BD
+
+[33mcommit c4bbb8ed2e3eefa04d1884220a578e78c91fc2d8[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Wed Jun 8 15:59:41 2016 -0500
+
+    Proyecto Nagra Documentación
+    
+    formulario_ccaa.doc  para nagra
+
+[33mcommit b96c507cbfe0cef594855694a3c17ae74f40d18d[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Wed Jun 1 13:27:41 2016 -0500
+
+    Proyecto Nagra Producción
+    
+    cambios a proceso Final
+
+[33mcommit 7501c46b9f40edbd13a6dc6573a6ebc258bfb78d[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Tue May 31 16:17:04 2016 -0500
+
+    Proyecto Nagra Pruebas Entrega
+    
+    procesos finales Spaghetti
+
+[33mcommit 353fc4888e4f1e5e29dddf3080ceb1fc3272e8ab[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Sat May 28 18:47:47 2016 -0500
+
+    Proyecto Nagra validaciones
+    
+    validaciones cuenta
+
+[33mcommit 5eb427db20a7192917c89e634a7b0281dcd37216[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Fri May 27 20:53:42 2016 -0500
+
+    Proyecto Nagra Correcciones
+    
+    Correcciones a la BD
+
+[33mcommit 395f21e019fd2ce33204dd6f23e3830d70345c6f[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Fri May 27 18:32:34 2016 -0500
+
+    Proyecto Nagra
+    
+    add Formulario Proyecto Nagra CCAA
+
+[33mcommit bc242df13f98bd7b2012ca2821bf0bb80b0d2088[m
+Author: Alejandro Montenegro <alejo_fix@HOTMAIL.COM>
+Date:   Fri May 27 18:30:56 2016 -0500
+
+    :space_invader: Added .gitattributes & .gitignore files
